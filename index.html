@@ -9,11 +9,11 @@
 <h1 style="text-align:center;color:white">Examples</h1>
 <h3 style="text-align:left;color:gold"> How to add chapters in pdf? </h3>
 <p style="color:#AFF3FF">To add chapters in pdf use following command:<br/><br/>
-<code>gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
+<code style="color:white">gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
 
 <br/><br/>
 Here chapters.txt will be in following format:<br/><br/>
-<code>[/Page 1 /Title (Chapter 1) /OUT pdfmark<br/>
+<code style="color:white">[/Page 1 /Title (Chapter 1) /OUT pdfmark<br/>
 [/Page 3  /Title (Chapter 2) /OUT pdfmark<br/>
 [/Page 4 /Title (Chapter 100) /OUT pdfmark<br/></code>
 <br/>
