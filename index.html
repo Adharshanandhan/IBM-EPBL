@@ -2,33 +2,32 @@
 <html>
 <head>
 <meta name="title" content="Ghostscript Commands to do various modifications in pdf" />
-<meta name="description" content="Add chapters in pdf with Ghostscript" />
-<meta name="viewport" content="width=device-width , initial-scale=1, user-scalable=no" />
+<meta name="description" content="Add chapters th , initial-scale=1, user-scalable=no" />
 </head>
-<body style="background-color:black">
+<body  id="sample" style="background-color:black">
 <header>
 <nav>
 <p><a href="#example" style="color:green">Home</a></p>
 </nav>
 </header>
 
-<h1 style="text-align:center;color:white">Examples</h1>
+<h1 style="text-align:center;color:#FF0017">Examples</h1>
 <h3 id="example" style="text-align:left;color:gold">1.How to add chapters in pdf? </h3>
-<p style="color:#AFF3FF">To add chapters in pdf use following command:<br/><br/>
-<code style="color:white">gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
+<p style="color:#7A00FF">To add chapters in pdf use following command:<br/><br/>
+<code style="color:green">gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
 
 <br/><br/>
 Here chapters.txt will be in following format:<br/><br/>
-<code style="color:white">[/Page 1 /Title (Chapter 1) /OUT pdfmark<br/>
+<code style="color:green">[/Page 1 /Title (Chapter 1) /OUT pdfmark<br/>
 [/Page 3  /Title (Chapter 2) /OUT pdfmark<br/>
 [/Page 4 /Title (Chapter 100) /OUT pdfmark<br/></code>
 <br/>
 You can add as many chapters as you want. Replace chapter 1 with chapter name and update the page no meaning If your pdf has a chapter named 'Hello world' on page no.5 then you can use like this <br/><br/>[/Page 5 /Title (Hello world) /OUT pdfmark<br/>
-</p><br><p style="color:#E5FF00">If You want to add subtopics or subchapters in pdf then add the option<span style="color:#0087FF"> /Count&nbsp;2 </span> as shown below: <br> <span style="color:#00FFC4">[/Page 1 /Title (First Page) /Count 2 /OUT pdfmark<br>[/Page 1 /Title (1st subtopic)  /OUT pdfmark<br>[/Page 3 /Title (2nd Subtopic)  /OUT pdfmark</span> <br>
+</p><br><p style="color:#005EFF">If You want to add subtopics or subchapters in pdf then add the option<span style="color:#0087FF"> /Count&nbsp;2 </span> as shown below: <br> <span style="color:#7D00C2">[/Page 1 /Title (First Page) /Count 2 /OUT pdfmark<br>[/Page 1 /Title (1st subtopic)  /OUT pdfmark<br>[/Page 3 /Title (2nd Subtopic)  /OUT pdfmark</span> <br>
 Here first line contains /Count&nbsp;2 so the two lines after this line will become subtopic to this chapter.</p>
 
 <br> <br>
-<p style="color:white"> [/Page 1 /Title (First Page) /Count 2 /OUT pdfmark
+<p style="color:#FF6500"> [/Page 1 /Title (First Page) /Count 2 /OUT pdfmark
 [/Page 2 /Title (Copyright page) /OUT pdfmark<br>
 [/Page 11 /Title (Contents) /OUT pdfmark<br>
 [/Page 14 /Title (1.The Indian Constitution ) /OUT pdfmark<br>
@@ -49,8 +48,46 @@ Here first line contains /Count&nbsp;2 so the two lines after this line will bec
   /Subject (Maths)
   /DOCINFO
 pdfmark</p>
+
+
+
+
+
+
+
+
+
+<button onclick="night();" style="padding:8px"> ☀️  </button>
+   
+   <script type="text/javascript">
+      function night() {
+         document.getElementById("sample").style.background="white";
+      }
+   </script>    
+   <button  onclick="day();"style="padding:8px"> 🌙  </button>
+   
+   
+      <script type="text/javascript">
+      function day() {
+         document.getElementById("sample").style.background="black";
+      }
+   </script>    
+   
+   
+   
+  
+  
+  
+  
+  
+  
+  
+  
+   
+   
+   
 <footer> 
-<h5 style="color:white"> &copy all rights reserved </h5>
+<h5 style="color:indigo"> &copy all rights reserved </h5>
 </footer>
 
 
