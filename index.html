@@ -4,10 +4,10 @@
 <!img src="https://graph.org/file/991342a41e0722552294a.jpg" !>
 <title>Ghostscript Commands to do various modifications in pdf</title>
 <meta name="title" content="Ghostscript Commands to do various modifications in pdf" />
-<meta  initial-scale=1, user-scalable=no" />
+<meta name="viewport" content="user-scalable=no, width=device-width,  initial-scale=1" />
 <link rel="shortcut icon" href="images/icon.jpg">
 </head>
-<body  id="sample" style="background-color:black">
+<body  id="sample" style="background-color:white">
 <header>
 <nav>
 <p><a href="#example" style="color:green">Home</a></p>
@@ -57,24 +57,25 @@ pdfmark</p>
 
 
 
-
-
-
-<button onclick="night();" style="padding:14px"> Day Mode </button>
-   
-   <script type="text/javascript">
-      function night() {
-         document.getElementById("sample").style.background="white";
-      }
-   </script>    
-   <button  onclick="day();"style="padding:14px"> Night Mode </button>
-   
-   
-      <script type="text/javascript">
-      function day() {
-         document.getElementById("sample").style.background="black";
-      }
-   </script>    
+<button id="mode" type="button" onclick='msg()' style="color:blue;font-weight:bold;padding:20px;font-size:17px" >Night Mode </button>
+<script type="text/javascript">
+var t=true
+function msg(){
+  var g=document.getElementById('sample');
+  var f=document.getElementById('mode');
+  if(t){
+   g.style="background-color:black";
+   f.innerHTML="Day Mode";
+   t=false;
+  }
+  else{
+    g.style="background-color:white";
+    f.innerHTML="Night Mode";
+    t=true;
+  }
+  //alert("You are not allowed to touch me");
+  };
+</script>
    
    
    
