@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- img src="https://graph.org/file/991342a41e0722552294a.jpg" -->
-<title>Ghostscript Commands to do various modifications in pdf</title>
-<meta name="title" content="Ghostscript Commands to do various modifications in pdf" />
-<meta name="viewport" content="user-scalable=no, width=device-width,  initial-scale=1" />
-<link rel="shortcut icon" href="images/icon.jpg">
+    <!-- img src="https://graph.org/file/991342a41e0722552294a.jpg" -->
+    <title>Ghostscript Commands to do various modifications in pdf</title>
+    <meta name="title" content="Ghostscript Commands to do various modifications in pdf" />
+    <meta name="viewport" content="user-scalable=no, width=device-width,  initial-scale=1" />
+    <link rel="shortcut icon" href="images/icon.jpg">
 </head>
-<body  id="sample" style="background-color:white">
-<header>
-<nav>
-<p><a href="#example" style="color:green">Home</a></p>
-</nav>
-</header>
+<body id="sample" style="background-color:white">
+    <header>
+        <nav>
+            <p>
+                <a href="#example" style="color:green">Home</a>
+            </p>
+        </nav>
+    </header>
 
-<h1 style="text-align:center;color:#FF0017">Examples</h1>
-<h3 id="example" style="text-align:left;color:gold">1.How to add chapters in pdf Using Ghostscript? </h3>
-<p style="color:#7A00FF">To add chapters in pdf use following command:<br/><br/>
-<code style="color:green">gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
+    <h1 style="text-align:center;color:#FF0017">Examples</h1>
+    <h3 id="example" style="text-align:left;color:gold">1.How to add chapters in pdf Using Ghostscript? </h3>
+    <p style="color:#7A00FF">
+        To add chapters in pdf use following command:<br /><br />
+        <code style="color:green">gs -sDEVICE=pdfwrite -dBATCH -dNOPAUSE  -sOutputFile=PdfWithChapters.pdf chapters.txt input.pdf</code>
 
-<br/><br/>
-Here chapters.txt will be in following format:<br/><br/>
-<code style="color:green">[/Page 1 /Title (Chapter 1) /OUT pdfmark<br/>
-[/Page 3  /Title (Chapter 2) /OUT pdfmark<br/>
-[/Page 4 /Title (Chapter 100) /OUT pdfmark<br/></code>
-<br/>
-You can add as many chapters as you want. Replace chapter 1 with chapter name and update the page no meaning If your pdf has a chapter named 'Hello world' on page no.5 then you can use like this <br/><br/>[/Page 5 /Title (Hello world) /OUT pdfmark<br/>
-</p><br><p style="color:#005EFF">If You want to add subtopics or subchapters in pdf then add the option<span style="color:#0087FF"> /Count&nbsp;2 </span> as shown below: <br> <span style="color:#7D00C2">[/Page 1 /Title (First Page) /Count 2 /OUT pdfmark<br>[/Page 1 /Title (1st subtopic)  /OUT pdfmark<br>[/Page 3 /Title (2nd Subtopic)  /OUT pdfmark</span> <br>
-Here first line contains /Count&nbsp;2 so the two lines after this line will become subtopic to this chapter.</p>
+        <br /><br />
+        Here chapters.txt will be in following format:<br /><br />
+        <code style="color:green">[/Page 1 /Title (Chapter 1) /OUT pdfmark<br />
+            [/Page 3  /Title (Chapter 2) /OUT pdfmark<br />
+            [/Page 4 /Title (Chapter 100) /OUT pdfmark<br /></code>
+        <br />
+        You can add as many chapters as you want. Replace chapter 1 with chapter name and update the page no meaning If your pdf has a chapter named 'Hello world' on page no.5 then you can use like this <br /><br />[/Page 5 /Title (Hello world) /OUT pdfmark<br />
+    </p>
+    <br><p style="color:#005EFF">
+        If You want to add subtopics or subchapters in pdf then add the option<span style="color:#0087FF"> /Count&nbsp;2 </span> as shown below: <br> <span style="color:#7D00C2">[/Page 1 /Title (First Page) /Count 2 /OUT pdfmark<br>[/Page 1 /Title (1st subtopic)  /OUT pdfmark<br>[/Page 3 /Title (2nd Subtopic)  /OUT pdfmark</span> <br>
+        Here first line contains /Count&nbsp;2 so the two lines after this line will become subtopic to this chapter.
+    </p>
 
-<br> <br>
-<p style="color:#FF6500"> [/Page 1 /Title (First Page) /Count 2 /OUT pdfmark
-[/Page 2 /Title (Copyright page) /OUT pdfmark<br>
-[/Page 11 /Title (Contents) /OUT pdfmark<br>
-[/Page 14 /Title (1.The Indian Constitution ) /OUT pdfmark<br>
-[/Page 28 /Title (2.Understanding Secularism) /OUT pdfmark<br>
-[/Page 40 /Title (3.Why Do We Need a Parliament? ) /OUT pdfmark<br>
-[/Page 52 /Title (4.Understanding Laws ) /OUT pdfmark<br>
-[/Page 64 /Title (5.Judiciary) /OUT pdfmark<br>
-[/Page 76 /Title (6.Understanding Our Criminal Justice System) /OUT pdfmark<br>
-[/Page 90 /Title (7.Understanding Marginalisation) /OUT pdfmark<br>
-[/Page 104 /Title (8.Confronting Marginalisation) /OUT pdfmark<br>
-[/Page 116 /Title (9.Public Facilities) /OUT pdfmark<br>
-[/Page 130 /Title (10.Law and Social Justice) /OUT pdfmark<br>
-[/Page 144 /Title (References) /OUT pdfmark<br>
-[ /Title (Relations)
-  /Author (PK)
-  /Creator (PK)
-  /Keywords (Maths, Relations and functions )
-  /Subject (Maths)
-  /DOCINFO
-pdfmark</p>
+    <br> <br>
+    <p style="color:#FF6500">
+        [/Page 1 /Title (First Page) /Count 2 /OUT pdfmark
+        [/Page 2 /Title (Copyright page) /OUT pdfmark<br>
+        [/Page 11 /Title (Contents) /OUT pdfmark<br>
+        [/Page 14 /Title (1.The Indian Constitution ) /OUT pdfmark<br>
+        [/Page 28 /Title (2.Understanding Secularism) /OUT pdfmark<br>
+        [/Page 40 /Title (3.Why Do We Need a Parliament? ) /OUT pdfmark<br>
+        [/Page 52 /Title (4.Understanding Laws ) /OUT pdfmark<br>
+        [/Page 64 /Title (5.Judiciary) /OUT pdfmark<br>
+        [/Page 76 /Title (6.Understanding Our Criminal Justice System) /OUT pdfmark<br>
+        [/Page 90 /Title (7.Understanding Marginalisation) /OUT pdfmark<br>
+        [/Page 104 /Title (8.Confronting Marginalisation) /OUT pdfmark<br>
+        [/Page 116 /Title (9.Public Facilities) /OUT pdfmark<br>
+        [/Page 130 /Title (10.Law and Social Justice) /OUT pdfmark<br>
+        [/Page 144 /Title (References) /OUT pdfmark<br>
+        [ /Title (Relations)
+        /Author (PK)
+        /Creator (PK)
+        /Keywords (Maths, Relations and functions )
+        /Subject (Maths)
+        /DOCINFO
+        pdfmark
+    </p>
 
 
 
 
-<style>
-a{
-  text-decoration:none
- }
-</style>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
 
-<button id="mode" type="button" onclick='msg()' style="color:blue;font-weight:bold;padding:5px;font-size:14px" >Night Mode </button><br/><br/>
+    <button id="mode" type="button" onclick='msg()' style="color:blue;font-weight:bold;padding:5px;font-size:14px">Night Mode </button><br /><br />
 
-<img src="images/IMG_20221112_231813.jpg" type="button" onclick='window.print()' style="height:23px;width:auto;"></img>
+    <img src="images/IMG_20221112_231813.jpg" type="button" onclick='window.print()' style="height:23px;width:auto;"></img>
 <script type="text/javascript">
-var t=true
-function msg(){
-  var g=document.getElementById('sample');
-  var f=document.getElementById('mode');
-  if(t){
-   g.style="background-color:black";
-   f.innerHTML="Day Mode";
-   t=false;
-  }
-  else{
-    g.style="background-color:white";
-    f.innerHTML="Night Mode";
-    t=true;
-  }
-  //alert("You are not allowed to touch me");
-  };
+    var t = true
+    function msg() {
+        var g = document.getElementById('sample');
+        var f = document.getElementById('mode');
+        if (t) {
+            g.style = "background-color:black";
+            f.innerHTML = "Day Mode";
+            t = false;
+        } else {
+            g.style = "background-color:white";
+            f.innerHTML = "Night Mode";
+            t = true;
+        }
+        //alert("You are not allowed to touch me");
+    };
 </script>
-   
-   
-   
-  
-  
-  
-  
-  
-  
-  
-  
-   
-   
-   
-<footer> 
-<h5 style="color:indigo"> &copy all rights reserved </h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <h5 style="color:indigo"> &copy all rights reserved </h5>
 </footer>
 
 
@@ -109,4 +116,5 @@ function msg(){
 
 
 </body>
+
 </html>
