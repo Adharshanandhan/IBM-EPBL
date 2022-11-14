@@ -69,7 +69,7 @@
 
 
 
-
+<span id="mode" class="material-symbols-outlined" type='button' onclick='msg()' >dark_mode</span><br /><br />
     <style>
         a {
             text-decoration: none
@@ -94,22 +94,19 @@
 }
 </style>
 
-    <button id="mode" type="button" onclick='msg()' style="color:blue;font-weight:bold;padding:5px;font-size:14px">Night Mode </button><br /><br />
+
 <script type="text/javascript">
     var t = true
     function msg() {
         var g = document.getElementById('sample');
         var f = document.getElementById('mode');
-        var cf = document.getElementByName('span');
         if (t) {
             g.style = "background-color:black";
-            f.innerHTML = "Day Mode";
-            cf.style = "color:white";
+            f.innerHTML = "<span id="mode" class="material-symbols-outlined" type='button' onclick='msg()' style="color:white">light_mode</span>";
             t = false;
         } else {
             g.style = "background-color:white";
-            f.innerHTML = "Night Mode";
-            cf.style = "color:black";
+            f.innerHTML = "<span id="mode" class="material-symbols-outlined" type='button' onclick='msg()' >dark_mode</span>";
             t = true;
         }
         //alert("You are not allowed to touch me");
@@ -130,7 +127,7 @@
 
 
 <footer>
-    <h5 style="color:indigo"> &copy all rights reserved </h5>
+    <h5 style="color:violet"> &copy all rights reserved </h5>
 </footer>
 
 
