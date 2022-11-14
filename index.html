@@ -20,9 +20,9 @@
             </p>
         </nav>
     </header>
-    <span class="material-symbols-sharp" style="float:right;color:green">menu</span>
-    <span class="material-symbols-sharp" style="float:right;color:green">close</span>
-    <span class="material-symbols-outlined" type="button" onclick='window.print()' style="color:green;">print</span>
+    <span class="material-symbols-sharp" style="float:right;color:black">menu</span>
+    <span class="material-symbols-sharp" style="float:right;color:black">close</span>
+    <span class="material-symbols-outlined" type="button" onclick='window.print()' style="color:black;">print</span>
     <h1 style="text-align:center;color:#FF0017">Examples</h1>
     <h3 id="example" style="text-align:left;color:gold">1.How to add chapters in pdf Using Ghostscript? </h3>
     <p style="color:#7A00FF">
@@ -100,13 +100,16 @@
     function msg() {
         var g = document.getElementById('sample');
         var f = document.getElementById('mode');
+        var cf = document.getElementByName('span');
         if (t) {
             g.style = "background-color:black";
             f.innerHTML = "Day Mode";
+            cf.style = "color:white";
             t = false;
         } else {
             g.style = "background-color:white";
             f.innerHTML = "Night Mode";
+            cf.style = "color:black";
             t = true;
         }
         //alert("You are not allowed to touch me");
